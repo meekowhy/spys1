@@ -132,7 +132,7 @@ class Product {
      * @param PDO $conn
      * @return bool
      */
-    public function deleteById(\PDO $conn) {
+    public function delete(\PDO $conn) {
         if ($this->id) {
             $stmt = $conn->prepare('DELETE FROM Product WHERE id=:id');
             $stmt->execute([
